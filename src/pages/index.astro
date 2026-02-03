@@ -12,38 +12,51 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 	</head>
 	<body>
 		<Header />
-		<main>
-			<h1>🧑‍🚀 Hello, Astronaut!</h1>
-			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This
-				template serves as a lightweight, minimally-styled starting point for anyone looking to build
-				a personal website, blog, or portfolio with Astro.
-			</p>
-			<p>
-				This template comes with a few integrations already configured in your
-				<code>astro.config.mjs</code> file. You can customize your setup with
-				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
-				React, or Vue to your project.
-			</p>
-			<p>Here are a few ideas on how to get started with the template:</p>
-			<ul>
-				<li>Edit this page in <code>src/pages/index.astro</code></li>
-				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-				<li>Check out the included blog posts in <code>src/content/blog/</code></li>
-				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
-			</ul>
-			<p>
-				Have fun! If you get stuck, remember to <a href="https://docs.astro.build/"
-					>read the docs
-				</a> or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-			</p>
-			<p>
-				Looking for a blog template with a bit more personality? Check out <a
-					href="https://github.com/Charca/astro-blog-template"
-					>astro-blog-template
-				</a> by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-			</p>
+		<main style="max-width: 900px; margin: 0 auto; padding: 2.5rem 1rem;">
+			<section style="margin-top: 1rem;">
+				<h1 style="font-size: 3rem; line-height: 1.1; margin-bottom: 0.75rem;">
+					BabyVitta
+				</h1>
+				<p style="font-size: 1.25rem; opacity: 0.9; margin-bottom: 1.5rem;">
+					Honest baby product guides, newborn essentials, and parent-friendly checklists.
+				</p>
+
+				<div style="display: flex; gap: 0.75rem; flex-wrap: wrap; margin-bottom: 2rem;">
+					<a href="/blog/" style="padding: 0.75rem 1rem; border: 1px solid #ddd; border-radius: 10px; text-decoration: none;">
+						Read the Blog →
+					</a>
+					<a href="/about/" style="padding: 0.75rem 1rem; border: 1px solid #ddd; border-radius: 10px; text-decoration: none;">
+						About BabyVitta →
+					</a>
+				</div>
+			</section>
+
+			<section style="margin-top: 2.5rem;">
+				<h2 style="font-size: 1.75rem; margin-bottom: 0.75rem;">What you’ll find here</h2>
+				<ul style="line-height: 1.9;">
+					<li><strong>Product picks</strong> — bottles, monitors, strollers, pumps, and more.</li>
+					<li><strong>Newborn basics</strong> — simple guides for the first 90 days.</li>
+					<li><strong>Safety & materials</strong> — what to look for (and what to avoid).</li>
+					<li><strong>Budget-friendly options</strong> — good picks that don’t waste money.</li>
+				</ul>
+			</section>
+
+			<section style="margin-top: 2.5rem; padding: 1.25rem; border: 1px solid #eee; border-radius: 14px;">
+				<h3 style="margin-top: 0; margin-bottom: 0.5rem;">Start here</h3>
+				<p style="margin-top: 0; margin-bottom: 0.75rem;">
+					New? Begin with the essentials list and the most useful guides.
+				</p>
+				<ul style="line-height: 1.9; margin: 0;">
+					<li><a href="/blog/best-baby-bottles/">Best Baby Bottles for Newborns (2026)</a></li>
+					<li><a href="/blog/">See all posts</a></li>
+				</ul>
+			</section>
+
+			<section style="margin-top: 2.5rem;">
+				<p style="font-size: 0.95rem; opacity: 0.85;">
+					<strong>Transparency:</strong> Some links may be affiliate links, which means BabyVitta may earn a commission at no extra cost to you.
+				</p>
+			</section>
 		</main>
 		<Footer />
 	</body>
