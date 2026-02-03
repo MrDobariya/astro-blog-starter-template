@@ -1,63 +1,185 @@
----
-import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
----
+<main class="home">
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-text">
+      <p class="eyebrow">BabyVitta</p>
+      <h1>Smarter baby picks.<br />Less stress.</h1>
+      <p class="subhead">
+        Honest baby product guides, newborn essentials, and parent-friendly checklists.
+      </p>
 
-<!doctype html>
-<html lang="en">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	</head>
-	<body>
-		<Header />
-		<main style="max-width: 900px; margin: 0 auto; padding: 2.5rem 1rem;">
-			<section style="margin-top: 1rem;">
-				<h1 style="font-size: 3rem; line-height: 1.1; margin-bottom: 0.75rem;">
-					BabyVitta
-				</h1>
-				<p style="font-size: 1.25rem; opacity: 0.9; margin-bottom: 1.5rem;">
-					Honest baby product guides, newborn essentials, and parent-friendly checklists.
-				</p>
+      <div class="actions">
+        <a class="btn primary" href="/blog/">Read the Blog</a>
+        <a class="btn" href="/about/">About BabyVitta</a>
+      </div>
+    </div>
 
-				<div style="display: flex; gap: 0.75rem; flex-wrap: wrap; margin-bottom: 2rem;">
-					<a href="/blog/" style="padding: 0.75rem 1rem; border: 1px solid #ddd; border-radius: 10px; text-decoration: none;">
-						Read the Blog →
-					</a>
-					<a href="/about/" style="padding: 0.75rem 1rem; border: 1px solid #ddd; border-radius: 10px; text-decoration: none;">
-						About BabyVitta →
-					</a>
-				</div>
-			</section>
+    <div class="hero-media">
+      <img src="/images/hero/hero.png" alt="Mother holding a newborn" />
+    </div>
+  </section>
 
-			<section style="margin-top: 2.5rem;">
-				<h2 style="font-size: 1.75rem; margin-bottom: 0.75rem;">What you’ll find here</h2>
-				<ul style="line-height: 1.9;">
-					<li><strong>Product picks</strong> — bottles, monitors, strollers, pumps, and more.</li>
-					<li><strong>Newborn basics</strong> — simple guides for the first 90 days.</li>
-					<li><strong>Safety & materials</strong> — what to look for (and what to avoid).</li>
-					<li><strong>Budget-friendly options</strong> — good picks that don’t waste money.</li>
-				</ul>
-			</section>
+  <!-- TILES -->
+  <section class="tiles">
+    <a class="tile" href="/blog/best-baby-bottles/">
+      <div class="tile-copy">
+        <p class="eyebrow">Feeding</p>
+        <h2>Baby Bottles</h2>
+        <p>Anti-colic picks, easy-clean options, and best value.</p>
+        <span class="link">Read guide →</span>
+      </div>
+      <img class="tile-img" src="/images/products/bottles.png" alt="Baby bottles" />
+    </a>
 
-			<section style="margin-top: 2.5rem; padding: 1.25rem; border: 1px solid #eee; border-radius: 14px;">
-				<h3 style="margin-top: 0; margin-bottom: 0.5rem;">Start here</h3>
-				<p style="margin-top: 0; margin-bottom: 0.75rem;">
-					New? Begin with the essentials list and the most useful guides.
-				</p>
-				<ul style="line-height: 1.9; margin: 0;">
-					<li><a href="/blog/best-baby-bottles/">Best Baby Bottles for Newborns (2026)</a></li>
-					<li><a href="/blog/">See all posts</a></li>
-				</ul>
-			</section>
+    <a class="tile" href="/blog/">
+      <div class="tile-copy">
+        <p class="eyebrow">Sleep</p>
+        <h2>Baby Monitors</h2>
+        <p>Clear video, secure connections, and simple setup.</p>
+        <span class="link">Explore →</span>
+      </div>
+      <img class="tile-img" src="/images/products/monitor.png" alt="Baby monitor" />
+    </a>
 
-			<section style="margin-top: 2.5rem;">
-				<p style="font-size: 0.95rem; opacity: 0.85;">
-					<strong>Transparency:</strong> Some links may be affiliate links, which means BabyVitta may earn a commission at no extra cost to you.
-				</p>
-			</section>
-		</main>
-		<Footer />
-	</body>
-</html>
+    <a class="tile" href="/blog/">
+      <div class="tile-copy">
+        <p class="eyebrow">On the go</p>
+        <h2>Strollers</h2>
+        <p>Comfort, safety, and everyday usability.</p>
+        <span class="link">Explore →</span>
+      </div>
+      <img class="tile-img" src="/images/products/stroller.png" alt="Stroller" />
+    </a>
+  </section>
+</main>
+
+<style>
+  .home{
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2.5rem 1rem 4rem;
+  }
+
+  .eyebrow{
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    font-size: .78rem;
+    opacity: .7;
+    margin: 0 0 .6rem;
+  }
+
+  .hero{
+    display: grid;
+    grid-template-columns: 1fr 1.15fr;
+    gap: 2.5rem;
+    align-items: center;
+    margin-bottom: 3.5rem;
+  }
+
+  .hero-text h1{
+    font-size: clamp(2.2rem, 4.8vw, 3.4rem);
+    line-height: 1.05;
+    margin: 0 0 1rem;
+  }
+
+  .subhead{
+    font-size: 1.15rem;
+    opacity: .85;
+    max-width: 52ch;
+    margin: 0 0 1.6rem;
+  }
+
+  .actions{
+    display: flex;
+    gap: .75rem;
+    flex-wrap: wrap;
+  }
+
+  .btn{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: .85rem 1.1rem;
+    border-radius: 999px;
+    border: 1px solid rgba(0,0,0,.14);
+    text-decoration: none;
+    font-weight: 600;
+    background: #fff;
+    color: #000;
+  }
+
+  .btn.primary{
+    background: #000;
+    color: #fff;
+    border-color: #000;
+  }
+
+  .hero-media img{
+    width: 100%;
+    height: auto;
+    border-radius: 28px;
+    box-shadow: 0 24px 70px rgba(0,0,0,.12);
+    display: block;
+  }
+
+  .tiles{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+
+  .tile{
+    position: relative;
+    overflow: hidden;
+    border-radius: 28px;
+    border: 1px solid rgba(0,0,0,.08);
+    background: #fff;
+    text-decoration: none;
+    color: inherit;
+    min-height: 360px;
+  }
+
+  .tile:hover{
+    box-shadow: 0 18px 50px rgba(0,0,0,.10);
+    transform: translateY(-1px);
+    transition: 180ms ease;
+  }
+
+  .tile-copy{
+    position: relative;
+    z-index: 2;
+    padding: 1.8rem;
+    max-width: 32ch;
+  }
+
+  .tile-copy h2{
+    margin: .25rem 0 .6rem;
+    font-size: 1.8rem;
+    line-height: 1.1;
+  }
+
+  .tile-copy p{
+    margin: 0 0 1rem;
+    opacity: .8;
+  }
+
+  .link{
+    font-weight: 700;
+  }
+
+  .tile-img{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 70%;
+    height: 100%;
+    object-fit: cover;
+    opacity: .95;
+  }
+
+  @media (max-width: 900px){
+    .hero{ grid-template-columns: 1fr; }
+    .tiles{ grid-template-columns: 1fr; }
+    .tile-img{ width: 60%; }
+  }
+</style>
